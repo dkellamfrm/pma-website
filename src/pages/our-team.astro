@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const team = [
+  {
+    name: 'Tony Devin',
+    title: 'Group CEO',
+    image: '/images/headshots/tony.jpeg',
+    bio: 'Tony is the founder and Group CEO of FRM Consulting Group, the parent company of PMA. With decades of experience in financial services and property investment, Tony drives the integrated approach that sets PMA apart — ensuring every client receives coordinated advice across accounting, finance, and property strategy.',
+  },
+  {
+    name: 'David Kellam',
+    title: 'CMO & CTO',
+    image: '/images/headshots/david.png',
+    bio: 'David leads the technology and marketing functions across the FRM group, including PMA. With deep expertise in digital strategy and technology-driven business transformation, David ensures PMA clients have access to the tools, systems, and information they need throughout their property investment journey.',
+  },
+  {
+    name: 'Brendan Robinson',
+    title: 'Group Business Development Manager',
+    image: '/images/headshots/brendan.jpeg',
+    bio: 'Brendan manages business development and referral partnerships across the FRM group. With strong networks across the financial services and property industries, Brendan connects clients with the right people and resources to support their investment goals.',
+  },
+];
+---
+
+<BaseLayout title="Our Team" description="Meet the team behind Property Management Australia — experienced leaders in property investment, financial services, and client outcomes.">
+
+  <!-- Page Header -->
+  <section class="bg-pma-navy py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="w-16 h-1 bg-pma-sky mb-6"></div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Our Team</h1>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          PMA is backed by the experienced leadership team of FRM Consulting Group, bringing deep expertise across property investment, financial services, and technology.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Members -->
+  <section class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-16">
+        {team.map((member, i) => (
+          <div class:list={[
+            'flex flex-col md:flex-row gap-8 md:gap-12 items-start',
+            i % 2 !== 0 && 'md:flex-row-reverse',
+          ]}>
+            <div class="w-full md:w-72 shrink-0">
+              <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-gray-100">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="flex-1 pt-2">
+              <div class="w-12 h-1 bg-pma-blue mb-4"></div>
+              <h2 class="text-2xl md:text-3xl font-bold text-pma-navy mb-1">{member.name}</h2>
+              <p class="text-pma-blue font-medium mb-4">{member.title}</p>
+              <p class="text-pma-gray leading-relaxed">{member.bio}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-bold text-pma-navy mb-4">Want to Connect?</h2>
+      <p class="text-pma-gray mb-6">
+        Reach out to discuss how PMA can help you build wealth through property investment.
+      </p>
+      <a href="/contact" class="inline-flex items-center px-8 py-3 bg-pma-navy text-white font-semibold rounded-lg hover:bg-pma-navy/90 transition-colors">
+        Contact Us
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

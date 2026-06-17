@@ -1,0 +1,48 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-pma-navy text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Brand -->
+      <div>
+        <img src="/images/logos/PMA-white.png" alt="Property Management Australia" class="h-10 mb-4" />
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Helping Australians build lasting wealth through strategic property investment, with a turnkey end-to-end solution.
+        </p>
+        <p class="text-gray-400 text-xs mt-3">
+          Part of <a href="https://frmcg.com.au" class="text-pma-sky hover:text-white transition-colors">FRM Consulting Group</a>
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider mb-4 text-pma-sky">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="/" class="text-gray-300 hover:text-white text-sm transition-colors">Home</a></li>
+          <li><a href="/our-team" class="text-gray-300 hover:text-white text-sm transition-colors">Our Team</a></li>
+          <li><a href="/contact" class="text-gray-300 hover:text-white text-sm transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wider mb-4 text-pma-sky">Contact</h3>
+        <address class="not-italic text-gray-300 text-sm space-y-2">
+          <p>Suite 22, Level 1<br />21 South Coolum Rd<br />Coolum Beach QLD 4573<br />Australia</p>
+          <p><a href="tel:0417548823" class="hover:text-white transition-colors">0417 548 823</a></p>
+        </address>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-gray-400 text-xs">
+        &copy; {year} Property Management Australia (Qld) Pty Ltd. ACN 630 110 682. All rights reserved.
+      </p>
+      <p class="text-gray-500 text-xs">
+        A subsidiary of <a href="https://frmcg.com.au" class="text-gray-400 hover:text-white transition-colors">FRM Consulting Group</a>
+      </p>
+    </div>
+  </div>
+</footer>
